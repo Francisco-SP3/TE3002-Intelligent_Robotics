@@ -98,8 +98,8 @@ for predictor, total_ssr in sorted_total_ssr_dict.items():
     print(f"{predictor}: {total_ssr}")
 
 # Especificar la profundidad del árbol
-profundidad_arbol = 20
-
+profundidad_arbol = 4
+    
 # Crear un árbol de decisión de regresión
 regression_tree = DecisionTreeRegressor(max_depth=profundidad_arbol)
 
@@ -107,10 +107,10 @@ regression_tree = DecisionTreeRegressor(max_depth=profundidad_arbol)
 regression_tree.fit(X, y)
 
 # Graficar el árbol de decisión con fuente pequeña y alta resolución
-plt.figure(figsize=(24, 16))  # Aumenta el tamaño de la figura para mejorar la resolución
-plot_tree(regression_tree, feature_names=X.columns, filled=True, rounded=True, fontsize=6)  # Establece el tamaño de la fuente
+plt.figure(figsize=(16, 12))  # segunda combinacion 18 14 
+plot_tree(regression_tree, feature_names=X.columns, filled=True, rounded=True, fontsize=6)  #segunda combinacion 4
 plt.title(f'Árbol de Decisión de Regresión (Profundidad {profundidad_arbol})')
 
 # Guardar la figura con alta resolución
-plt.savefig('regression_tree_high_dpi.png', dpi=300)  # Ajusta el dpi según tu preferencia
+plt.savefig('regression_tree_high_dpi.png', dpi=300)  #dots per inch (resolucion)
 plt.show()
