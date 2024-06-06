@@ -4,7 +4,7 @@ import os
 import sys
 
 # Path to the folder where the photos will be saved
-path = "vision/chessboard_webcam"
+path = "vision/chessboard_drone"
 
 # Create the folder if it does not exist
 if not os.path.exists(path):
